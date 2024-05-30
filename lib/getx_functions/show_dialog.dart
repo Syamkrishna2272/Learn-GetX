@@ -10,7 +10,7 @@ class GetxShowDialog extends StatelessWidget {
       backgroundColor: Colors.lightGreen,
       appBar: AppBar(
         backgroundColor: Colors.yellow,
-        title: Center(
+        title: const Center(
             child: Text(
           "SHOWDIALOGUE ",
           style: TextStyle(fontWeight: FontWeight.w700),
@@ -19,9 +19,27 @@ class GetxShowDialog extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              Get.defaultDialog();
-            },
-            child: Text("Submit")),
+              Get.defaultDialog(
+              title: 'Warning Message',
+              titleStyle:const TextStyle(fontSize: 20),
+              middleText: 'No network found',
+              backgroundColor: Colors.blue,
+              textCancel: 'Cancel',
+              buttonColor: Colors.black,
+              cancelTextColor: Colors.black54,
+              textConfirm: 'Confirm',
+              // content: Row(
+              //   children: [
+              //     CircularProgressIndicator(),
+              //     SizedBox(
+              //       width: 15,
+              //     ),
+              //     Expanded(child: Text("Loading"))
+              //   ],
+              // )
+            );
+            }, 
+            child: const Text("Submit")),
       ),
     );
   }

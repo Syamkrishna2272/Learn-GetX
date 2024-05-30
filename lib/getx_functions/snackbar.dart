@@ -11,8 +11,8 @@ class GetxSnackbar extends StatelessWidget {
       backgroundColor: Colors.blueGrey,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Center(
-            child: const Text(
+        title: const Center(
+            child: Text(
           "SNACKBAR MODEL",
           style: TextStyle(fontWeight: FontWeight.w700),
         )),

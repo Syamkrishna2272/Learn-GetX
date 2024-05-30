@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:learn_getx/getx_functions/show_dialog.dart';
-import 'package:learn_getx/getx_functions/snackbar.dart';
+import 'package:learn_getx/getx_functions/reactive_statemanager.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      // home: GetxSnackbar(),
-      home: GetxShowDialog(),
+      home: ReactiveStateManager(),
     );
   }
 }
